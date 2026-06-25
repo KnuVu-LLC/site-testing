@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Testing — Index</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <main class="hub">
+    <header class="hub__header">
+      <h1>🧪 Site Testing</h1>
+      <p class="hub__subtitle">
+        A scratch space for simple HTML/CSS/JS sites deployed to GitHub Pages.
+        Each folder below is its own standalone site.
+      </p>
+    </header>
+
+    <section>
+      <h2>Sites</h2>
+      <ul class="card-list">
+        <!-- Add a new <li> here whenever you create a new site folder. -->
+        <li class="card">
+          <a href="./hello-world/">
+            <span class="card__title">Hello World</span>
+            <span class="card__desc">Minimal HTML + CSS + JS starter.</span>
+            <code class="card__path">/hello-world/</code>
+          </a>
+        </li>
+        <li class="card">
+          <a href="./landing-demo/">
+            <span class="card__title">Landing Demo</span>
+            <span class="card__desc">A slightly fancier single-page layout.</span>
+            <code class="card__path">/landing-demo/</code>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="hub__footer">
+      <p>
+        New site? Create a folder with an <code>index.html</code> at the repo root,
+        push, and it's live at <code>/&lt;folder-name&gt;/</code>.
+        Then add a card above so it's linked here.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
