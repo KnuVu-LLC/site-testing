@@ -18,7 +18,7 @@ body {
 }
 
 .hub {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 3rem 1.25rem 4rem;
 }
@@ -26,47 +26,47 @@ body {
 .hub__header h1 { margin: 0 0 .25rem; font-size: 2rem; }
 .hub__subtitle { color: var(--muted); margin: 0 0 2rem; }
 
-h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
-
-.card-list {
+.folders {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
-  gap: .75rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
 }
 
-.card a {
-  display: block;
-  padding: 1rem 1.1rem;
+.folder a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+  padding: 1.5rem 1rem;
   background: var(--panel);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 14px;
   text-decoration: none;
   color: inherit;
-  transition: border-color .15s ease, transform .15s ease;
+  text-align: center;
+  transition: border-color .15s ease, transform .15s ease, background .15s ease;
 }
 
-.card a:hover {
+.folder a:hover {
   border-color: var(--accent);
-  transform: translateY(-2px);
+  background: #1f2440;
+  transform: translateY(-3px);
 }
 
-.card__title { display: block; font-weight: 600; font-size: 1.05rem; }
-.card__desc { display: block; color: var(--muted); margin: .15rem 0 .4rem; font-size: .9rem; }
-.card__path { font-size: .8rem; color: var(--accent); }
+.folder__icon { font-size: 2.75rem; line-height: 1; }
 
-.hub__footer {
-  margin-top: 2.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--border);
+.folder__name {
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.status {
+  list-style: none;
   color: var(--muted);
-  font-size: .85rem;
+  padding: 1rem 0;
 }
 
-code {
-  background: rgba(110, 168, 254, .12);
-  padding: .1rem .35rem;
-  border-radius: 5px;
-  font-size: .85em;
-}
+.status--error { color: #ff9a9a; }
